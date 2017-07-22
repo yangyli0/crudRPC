@@ -6,8 +6,8 @@
 ### 二.使用
 #### 服务端：
 1. <code>mvn clean package</code>
-2. 在server.sh中修改相应端口参数, <code>./server.sh</code>
+2. <code>./server.sh yourport</code>
 #### 客户端：
 1. <code>mvn clean package</code>
-2. 在funtionTest.sh中修改相应的地址参数，端口参数.<code>./functionTest.sh</code> 
+2. <code>./functionTest.sh remoteaddress remoteport</code> 
 

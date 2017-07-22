@@ -33,15 +33,10 @@ testCallback:java.lang.reflect.InvocationTargetException
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at com.alibaba.middleware.race.rpc.demo.test.ConsumerFunctionalTest.main(ConsumerFunctionalTest.java:26)
-Caused by: java.lang.RuntimeException: Time out
-	at com.alibaba.middleware.race.rpc.async.ResponseFuture.getResponse(ResponseFuture.java:30)
-	at com.alibaba.middleware.race.rpc.api.impl.RpcConsumerImpl.asynCall(RpcConsumerImpl.java:77)
-	at com.alibaba.middleware.race.rpc.demo.builder.ConsumerBuilder.testCallback(ConsumerBuilder.java:123)
+Caused by: java.lang.RuntimeException: The response doesn't come back.
+	at com.alibaba.middleware.race.rpc.demo.service.RaceServiceListener.getResponse(RaceServiceListener.java:20)
+	at com.alibaba.middleware.race.rpc.demo.builder.ConsumerBuilder.testCallback(ConsumerBuilder.java:127)
 	... 5 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
-	at com.alibaba.middleware.race.rpc.async.ResponseFuture.getResponse(ResponseFuture.java:22)
-	... 7 more
 
 testRpcContext:pass
 testConsumerHook:pass
